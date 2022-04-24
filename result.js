@@ -5,7 +5,7 @@ let $right = document.querySelector(".right");
 let $correct = document.querySelector(".correct");
 let $home = document.querySelector(".home");
 
-// подсчитывает поличество правильных ответов 
+// подсчитывает поличество правильных ответов
 function countRight(tasks, number) {
   let counter = 0;
   for (let i = 1; i <= number; i++) {
@@ -22,7 +22,9 @@ function showAnswers(tasks, number) {
     let task = `task${i}`;
     let el = document.createElement("div");
     el.className = `el${i}`;
-    el.textContent = `${tasks[task].eq}${tasks[task].given == null ? "" : tasks[task].given}`;
+    el.textContent = `${tasks[task].eq}${
+      tasks[task].given == null ? "" : tasks[task].given
+    }${tasks[task].right ? "" : `(${tasks[task].ans})`}`;
     el.style.color = "rgba(255, 255, 255, 0.7)";
     el.style.background = tasks[task].right
       ? "rgba(80, 255, 80,0.5)"
@@ -32,14 +34,14 @@ function showAnswers(tasks, number) {
 }
 
 // выбирает и устанавливает неправильно решенные примеры
-function correctionOfMistakes(tasks, number){
-  let uncorrect = {}
+function correctionOfMistakes(tasks, number) {
+  let uncorrect = {};
   counter = 0;
   for (let i = 1; i <= number; i++) {
     let task = `task${i}`;
     if (!tasks[task].right) {
       counter += 1;
-      uncorrect[`task${counter}`] = tasks[task]
+      uncorrect[`task${counter}`] = tasks[task];
     }
   }
   localStorage.tasks = JSON.stringify(uncorrect);
@@ -48,22 +50,22 @@ function correctionOfMistakes(tasks, number){
 }
 
 // демонстрирует результат тестирования
-function showResult(tasks, number){
-  $right.textContent = `Результат: ${countRight(tasks, number)} из ${number}`
-  showAnswers(tasks, number)
+function showResult(tasks, number) {
+  $right.textContent = `Результат: ${countRight(tasks, number)} из ${number}`;
+  showAnswers(tasks, number);
 }
 
-showResult(tasks, settings.questions)
+showResult(tasks, settings.questions);
 
 if (settings.questions == countRight(tasks, settings.questions)) {
-  $correct.style.display = 'none';
+  $correct.style.display = "none";
 }
 
-$correct.addEventListener('click', () => {
-  correctionOfMistakes(tasks, settings.questions)
+$correct.addEventListener("click", () => {
+  correctionOfMistakes(tasks, settings.questions);
   window.location.href = "test.html";
-})
+});
 
-$home.addEventListener('click', () => {
+$home.addEventListener("click", () => {
   window.location.href = "index.html";
-})
+});
