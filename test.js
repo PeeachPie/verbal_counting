@@ -25,7 +25,7 @@ function createNewTask(tasks) {
     localStorage.tasks = JSON.stringify(tasks);
     window.location.href = "result.html";
   }
-  $counter.style.color = "#5a5a5a";
+  $counter.style.color = 'rgba(90, 90, 90, 0.8)';
   $counter.textContent = `${counter} задание из ${settings.questions}`;
   $result.style.display = "none";
   $new.style.display = "none";
