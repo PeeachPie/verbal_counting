@@ -24,7 +24,7 @@ function showAnswers(tasks, number) {
     el.className = `el${i}`;
     el.textContent = `${tasks[task].eq}${
       tasks[task].given == null ? "" : tasks[task].given
-    }${tasks[task].right ? "" : `(${tasks[task].ans})`}`;
+    }${tasks[task].right ? "" : ` (${tasks[task].ans})`}`;
     el.style.color = "rgba(255, 255, 255, 0.7)";
     el.style.background = tasks[task].right
       ? "rgba(80, 255, 80,0.5)"
