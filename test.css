@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #5a5a5a;
+}
+
+body {
+  background: linear-gradient(135deg, #ff7bac 0%, #3fa9f5 100%);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container .task {
+  margin-top: 25vmin;
+  width: 90vmin;
+  height: 50vmin;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6vmin;
+  -moz-border-radius: 6vmin;
+  -webkit-border-radius: 6vmin;
+}
+
+.container .task .counter {
+  margin-top: 5vmin;
+  font-size: 3.5vmin;
+}
+
+.container .task .equation {
+  margin-top: 6.5vmin;
+  font-size: 12vmin;
+  height: 12vmin;
+  border-radius: 2vmin;
+  -moz-border-radius: 2vmin;
+  -webkit-border-radius: 2vmin;
+}
+
+.container .task .equation #answer {
+  border: 0;
+  color: #5a5a5a;
+  font-size: 12vmin;
+  font-family: 'Roboto', sans-serif;
+  width: 20vmin;
+  height: 13vmin;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2vmin;
+  -moz-border-radius: 2vmin;
+  -webkit-border-radius: 2vmin;
+  text-align: center;
+}
+
+.container .task .equation #answer:focus {
+  outline: none;
+}
+
+.container .task .result {
+  margin-top: 6.5vmin;
+  font-size: 10vmin;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.container .task .buttons > * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 5vmin;
+  padding-top: 2vmin;
+  height: 9vmin;
+  margin: auto;
+  margin-top: 7vmin;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6vmin;
+  -moz-border-radius: 6vmin;
+  -webkit-border-radius: 6vmin;
+}
+
+.container .task .buttons > *:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.container .task .buttons .new {
+  width: 22vmin;
+}
+
+.container .task .buttons .check {
+  width: 30vmin;
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 6vmin;
+  font-family: 'Roboto', sans-serif;
+  color: #646464;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(135deg, #ff7bac 0%, #3fa9f5 100%);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 90vmin;
+  height: 90vmin;
+  border-radius: 6vmin;
+  -moz-border-radius: 6vmin;
+  -webkit-border-radius: 6vmin;
+  margin: auto;
+  margin-top: 5vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text {
+  margin-top: 3vmin;
+  font-size: 5vmin;
+}
+
+.choose {
+  margin: auto;
+  margin-top: 2vmin;
+  color: #6e6e6e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.choose *:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.choose * {
+  margin-right: 2vmin;
+  padding-top: 2.5vmin;
+  width: 12vmin;
+  height: 9.5vmin;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6vmin;
+}
+
+.division, .m100, .q20 {
+  margin: 0;
+}
+
+.operators {
+  font-size: 8vmin;
+}
+
+.operators * {
+  height: 11vmin;
+  padding-top: 1vmin;
+}
+
+.start {
+  outline: none;
+  text-decoration: none;
+  padding-top: 2vmin;
+  margin: auto;
+  font-size: 5vmin;
+  width: 22vmin;
+  height: 9vmin;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6vmin;
+  -moz-border-radius: 6vmin;
+  -webkit-border-radius: 6vmin;
+}
+
+.start:link {
+  color: rgba(60, 60, 60, 0.8);
+}
+
+.start:visited {
+  color: rgba(60, 60, 60, 0.8);
+}
+
+.start:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.start:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}

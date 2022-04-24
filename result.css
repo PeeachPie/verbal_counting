@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  font-size: 5.5vmin;
+  font-family: 'Roboto', sans-serif;
+  color: #646464;
+  overflow-y: scroll;
+}
+
+body {
+  background: linear-gradient(135deg, #ff7bac 0%, #3fa9f5 100%);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container .result {
+  padding: 3vmin;
+  width: 84vmin;
+  margin: auto;
+  margin-top: 10vmin;
+  margin-bottom: 10vmin;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6vmin;
+  -moz-border-radius: 6vmin;
+  -webkit-border-radius: 6vmin;
+}
+
+.container .result .right {
+  margin-bottom: 3vmin;
+}
+
+.container .result .answers > :first-child {
+  border-top-left-radius: 3vmin;
+  border-top-right-radius: 3vmin;
+  -moz-border-top-left-radius: 3vmin;
+  -moz-border-top-right-radius: 3vmin;
+  -webkit-border-top-left-radius: 3vmin;
+  -webkit-border-top-right-radius: 3vmin;
+}
+
+.container .result .answers > :last-child {
+  border-bottom-left-radius: 3vmin;
+  border-bottom-right-radius: 3vmin;
+  -moz-border-bottom-left-radius: 3vmin;
+  -moz-border-bottom-right-radius: 3vmin;
+  -webkit-border-bottom-left-radius: 3vmin;
+  -webkit-border-bottom-right-radius: 3vmin;
+}
+
+.container .result .buttons > * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 5vmin;
+  padding-top: 2vmin;
+  height: 9vmin;
+  margin: auto;
+  margin-top: 3vmin;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6vmin;
+  -moz-border-radius: 6vmin;
+  -webkit-border-radius: 6vmin;
+}
+
+.container .result .buttons > *:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.container .result .buttons .correct {
+  width: 60vmin;
+}
+
+.container .result .buttons .home {
+  width: 35vmin;
+}
