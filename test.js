@@ -24,16 +24,17 @@ function createNewTask(tasks) {
   if (counter > settings.questions) {
     localStorage.tasks = JSON.stringify(tasks);
     window.location.href = "result.html";
+  }else{
+    $counter.style.color = 'rgba(90, 90, 90, 0.8)';
+    $counter.textContent = `${counter} задание из ${settings.questions}`;
+    $result.style.display = "none";
+    $new.style.display = "none";
+    $equation.style.display = "block";
+    $check.style.display = "block";
+    $answer.value = "";
+    $task.style.background = "rgba(255, 255, 255,0.3)";
+    $problem.textContent = tasks[`task${counter}`].eq;
   }
-  $counter.style.color = 'rgba(90, 90, 90, 0.8)';
-  $counter.textContent = `${counter} задание из ${settings.questions}`;
-  $result.style.display = "none";
-  $new.style.display = "none";
-  $equation.style.display = "block";
-  $check.style.display = "block";
-  $answer.value = "";
-  $task.style.background = "rgba(255, 255, 255,0.3)";
-  $problem.textContent = tasks[`task${counter}`].eq;
 }
 
 // проверяет является ли данный пользователем ответ правильным
